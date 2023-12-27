@@ -31,6 +31,7 @@ def main(args):
     with torch.no_grad():
         pred = np.zeros(args.batch_size * len(dataset))
         target = np.zeros(args.batch_size * len(dataset))
+        model.reset_hidden(args.batch_size, device)
         for i in range(len(dataset)):
             x, y = dataset[i]
             y_pred = model(x)

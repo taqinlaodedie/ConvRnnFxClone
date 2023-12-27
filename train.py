@@ -32,8 +32,8 @@ def main(args):
         train_loss = model.train_epoch(train_dataset, loss_function, optimizer, device, shuffle=True)
         valid_loss = model.valid_epoch(valid_dataset, loss_function, device)
         print("Train loss {}, Valid loss {}".format(train_loss, valid_loss))
-        if valid_loss < minimum_loss:
-            minimum_loss = valid_loss
+        if train_loss < minimum_loss:
+            minimum_loss = train_loss
             torch.save(model, "model.pth")
 
 if __name__ == "__main__":

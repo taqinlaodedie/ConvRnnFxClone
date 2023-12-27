@@ -86,8 +86,3 @@ class ConvRNN(nn.Module):
                 epoch_loss = epoch_loss + loss
             epoch_loss = epoch_loss / (i + 1)
             return epoch_loss
-        
-# model = LeNet()
-# input = torch.rand(512, 256, 1)
-# output = model(input)
-# print(output.shape)

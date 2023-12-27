@@ -22,6 +22,6 @@ def save_model(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="model.pth")
-    parser.add_argument("--sequence_length", type=int, default=256)
+    parser.add_argument("--sequence_length", type=int, default=128)
     args = parser.parse_args()
     save_model(args)
